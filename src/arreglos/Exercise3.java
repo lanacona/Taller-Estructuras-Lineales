@@ -6,6 +6,7 @@ import java.util.Scanner;
 import utils.Printer;
 
 public class Exercise3 {
+
     public void run() {
         Scanner scanner = new Scanner(System.in);
         Random randomGenerator = new Random();
@@ -18,12 +19,13 @@ public class Exercise3 {
         int[] factorials = new int[size];
 
         for (int i = 0; i < size; i++) {
-            numbers[i] = randomGenerator.nextInt(10); // números entre 0 y 9
+            numbers[i] = randomGenerator.nextInt(10); 
             factorials[i] = Processor.calculateFactorial(numbers[i]);
         }
 
         Printer.printArray(numbers, "Original numbers:");
         Printer.printArray(factorials, "Factorials:");
+        scanner.close();
     }
 
 }

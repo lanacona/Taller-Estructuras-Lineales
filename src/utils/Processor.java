@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Processor {
 
-    // Calculate factorial of a number
     public static int calculateFactorial(int number) {
         int result = 1;
         for (int i = 1; i <= number; i++) {
@@ -43,7 +42,7 @@ public class Processor {
         return inverted;
     }
 
-    // Métodos para ArrayList
+    // Methods for ArrayList
     public static int calculateSum(ArrayList<Integer> list) {
         int sum = 0;
         for (int value : list) {
@@ -53,12 +52,13 @@ public class Processor {
     }
 
     public static double calculateAverage(ArrayList<Integer> list) {
-        if (list.isEmpty()) return 0;
+        if (list.isEmpty())
+            return 0;
         return (double) calculateSum(list) / list.size();
     }
 
     public static int[] calculateFrequencies(ArrayList<Integer> list, int maxNumber) {
-        int[] frequencies = new int[maxNumber + 1]; // índice 0 no se usa
+        int[] frequencies = new int[maxNumber + 1]; // index 0 is not used
         for (int value : list) {
             frequencies[value]++;
         }
@@ -81,21 +81,59 @@ public class Processor {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] == target) {
-                    return new int[]{i, j}; // primera ocurrencia
+                    return new int[] { i, j }; // first occurrence
                 }
             }
         }
-        return null; // no encontrado
+        return null; // not found
     }
 
     public static int sumOppositeDiagonal(int[][] matrix) {
         int sum = 0;
         int size = matrix.length;
         for (int i = 0; i < size; i++) {
-            sum += matrix[i][size - 1 - i]; // diagonal secundaria
+            sum += matrix[i][size - 1 - i]; // secondary diagonal
         }
         return sum;
     }
 
+    public static boolean isSymmetric(int[][] matrix) {
+        int size = matrix.length;
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (matrix[i][j] != matrix[j][i]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static int[][] transposeMatrix(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[][] transpose = new int[cols][rows];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                transpose[j][i] = matrix[i][j];
+            }
+        }
+        return transpose;
+    }
+
+    public static void swapFirstTwoRows(int[][] matrix) {
+        if (matrix.length < 2) {
+            System.out.println("Matrix must have at least 2 rows to swap.");
+            return;
+        }
+
+        int cols = matrix[0].length;
+        for (int j = 0; j < cols; j++) {
+            int temp = matrix[0][j];
+            matrix[0][j] = matrix[1][j];
+            matrix[1][j] = temp;
+        }
+    }
 
 }

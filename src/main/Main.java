@@ -11,6 +11,9 @@ import arreglos.Exercise4;
 import arreglos.Exercise5;
 import matrices.Exercise11;
 import matrices.Exercise12;
+import matrices.Exercise13;
+import matrices.Exercise14;
+import matrices.Exercise15;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,9 +29,11 @@ public class Main {
         new Exercise7().run();
         new Exercise8().run();
         new Exercise9().run();
-
         new Exercise11().run();
         new Exercise12().run();
+        new Exercise13().run();
+        new Exercise14().run();
+        new Exercise15().run();
 
     }
 }

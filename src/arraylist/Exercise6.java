@@ -6,13 +6,14 @@ import utils.Printer;
 import utils.Processor;
 
 public class Exercise6 {
+    
     public void run() {
         Random randomGenerator = new Random();
         ArrayList<Integer> numbers = new ArrayList<>();
 
         int number;
         do {
-            number = randomGenerator.nextInt(21) - 10; // rango -10 a 10
+            number = randomGenerator.nextInt(21) - 10; // range -10 a 10
             numbers.add(number);
         } while (number != 10);
 
@@ -24,6 +25,5 @@ public class Exercise6 {
         System.out.println("Sum: " + sum);
         System.out.println("Average: " + average);
     }
-
 
 }

@@ -3,9 +3,8 @@ package utils;
 import java.util.ArrayList;
 
 public class Printer {
-    
 
-    // Versión simple (Ejercicio 2)
+    // Simple version
     public static void printArray(int[] array) {
         for (int value : array) {
             System.out.print(value + " ");
@@ -13,7 +12,7 @@ public class Printer {
         System.out.println();
     }
 
-    // Versión con mensaje (Ejercicio 3 y otros)
+    // Version with message
     public static void printArray(int[] array, String message) {
         System.out.println(message);
         for (int value : array) {
@@ -33,7 +32,7 @@ public class Printer {
         System.out.println();
     }
 
-    //Metodos arraylist
+    // Methods arraylist
     public static void printArrayList(ArrayList<Integer> list, String message) {
         System.out.println(message);
         for (int value : list) {
@@ -50,8 +49,8 @@ public class Printer {
         }
     }
 
-    //metods matriz
-    
+    // methods matriz
+
     public static void printMatrix(int[][] matrix, String message) {
         System.out.println(message);
         for (int[] row : matrix) {
@@ -62,5 +61,13 @@ public class Printer {
         }
     }
 
+    public static void printMatrixCorners(int[][] matrix, String message) {
+        System.out.println(message);
+        int size = matrix.length;
+        System.out.println("Top-left corner: " + matrix[0][0]);
+        System.out.println("Top-right corner: " + matrix[0][size - 1]);
+        System.out.println("Bottom-left corner: " + matrix[size - 1][0]);
+        System.out.println("Bottom-right corner: " + matrix[size - 1][size - 1]);
+    }
 
 }

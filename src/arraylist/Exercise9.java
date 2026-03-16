@@ -10,7 +10,7 @@ public class Exercise9 {
         Random randomGenerator = new Random();
         ArrayList<Integer> numbers = new ArrayList<>();
 
-        // Generar 20 números aleatorios entre 1 y 100
+        // Generate 20 random numbers between 1 and 100
         for (int i = 0; i < 20; i++) {
             numbers.add(randomGenerator.nextInt(100) + 1);
         }
@@ -18,17 +18,17 @@ public class Exercise9 {
         System.out.println("\n--- Exercise 9: ArrayList sorting and separation ---");
         Printer.printArrayList(numbers, "Original numbers:");
 
-        // Ordenar de menor a mayor
+        // Order from smallest to largest
         ArrayList<Integer> ascending = new ArrayList<>(numbers);
         Collections.sort(ascending);
         Printer.printArrayList(ascending, "Sorted ascending:");
 
-        // Ordenar de mayor a menor
+        // Sort from highest to lowest
         ArrayList<Integer> descending = new ArrayList<>(numbers);
         descending.sort(Collections.reverseOrder());
         Printer.printArrayList(descending, "Sorted descending:");
 
-        // Separar pares e impares
+        // Separate even and odd numbers
         ArrayList<Integer> evens = new ArrayList<>();
         ArrayList<Integer> odds = new ArrayList<>();
         for (int value : numbers) {
@@ -41,6 +41,5 @@ public class Exercise9 {
         Printer.printArrayList(evens, "Even numbers:");
         Printer.printArrayList(odds, "Odd numbers:");
     }
-
 
 }

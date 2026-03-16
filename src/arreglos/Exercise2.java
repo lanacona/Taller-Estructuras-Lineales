@@ -12,9 +12,8 @@ public class Exercise2 {
         }
 
         System.out.println("Exercise 2 : First 100 Even numbers");
-        Printer.printArray(evenNumbers); // una sola línea
+        Printer.printArray(evenNumbers); // a single line
         Printer.printArrayInLines(evenNumbers, 10); // 10 líneas
     }
 
-    
-} 
+}

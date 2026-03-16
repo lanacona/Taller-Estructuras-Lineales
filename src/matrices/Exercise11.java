@@ -18,7 +18,7 @@ public class Exercise11 {
 
         int[][] matrix = new int[rows][cols];
 
-        // Rellenar con números aleatorios entre 0 y 99
+        // Fill with random numbers between 0 and 99
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 matrix[i][j] = randomGenerator.nextInt(100);
@@ -38,6 +38,7 @@ public class Exercise11 {
         } else {
             System.out.println("Number " + target + " not found in the matrix.");
         }
+        scanner.close();
     }
 
 }

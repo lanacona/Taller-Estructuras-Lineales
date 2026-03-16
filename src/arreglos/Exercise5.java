@@ -11,7 +11,7 @@ public class Exercise5 {
         int[] invertedNumbers = new int[20];
 
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = randomGenerator.nextInt(100); // números entre 0 y 99
+            numbers[i] = randomGenerator.nextInt(100); // numbers between 0 y 99
             invertedNumbers[i] = Processor.invertNumber(numbers[i]);
         }
 
@@ -19,6 +19,5 @@ public class Exercise5 {
         Printer.printArray(numbers, "Original numbers:");
         Printer.printArray(invertedNumbers, "Inverted numbers:");
     }
-
 
 }

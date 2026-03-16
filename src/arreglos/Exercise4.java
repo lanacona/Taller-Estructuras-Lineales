@@ -10,7 +10,7 @@ public class Exercise4 {
         int[] numbers = new int[25];
 
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = randomGenerator.nextInt(101) - 50; // rango -50 a 50
+            numbers[i] = randomGenerator.nextInt(101) - 50; // range -50 a 50
         }
 
         int min = Processor.findMin(numbers);
@@ -21,6 +21,5 @@ public class Exercise4 {
         System.out.println("Minimum number: " + min);
         System.out.println("Maximum number: " + max);
     }
-
 
 }
